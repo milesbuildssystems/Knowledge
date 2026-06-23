@@ -222,6 +222,10 @@ text{font-family:var(--font)}
 #slide-48 .stack .val{text-decoration:line-through;text-decoration-color:transparent;text-decoration-thickness:5px;transition:color .45s ease,text-decoration-color .45s ease}
 #slide-48 .stack.struck .val{color:var(--text-dim);text-decoration-color:var(--red)}
 #slide-48 .stack.struck .srow:nth-child(2) .val{transition-delay:.05s}#slide-48 .stack.struck .srow:nth-child(3) .val{transition-delay:.1s}#slide-48 .stack.struck .srow:nth-child(4) .val{transition-delay:.15s}#slide-48 .stack.struck .srow:nth-child(5) .val{transition-delay:.2s}#slide-48 .stack.struck .srow:nth-child(6) .val{transition-delay:.25s}#slide-48 .stack.struck .srow:nth-child(7) .val{transition-delay:.3s}#slide-48 .stack.struck .srow:nth-child(8) .val{transition-delay:.35s}
+.pstack{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:20px}
+.prow .pamt{font-size:82px;font-weight:800;line-height:1;color:var(--text);text-decoration:line-through;text-decoration-color:transparent;text-decoration-thickness:6px;transition:color .35s ease,text-decoration-color .35s ease}
+.prow.struck .pamt{color:rgba(255,255,255,.25);text-decoration-color:var(--red)}
+.prow .plbl{font-size:18px;font-weight:500;text-align:center;margin-top:2px;color:rgba(255,255,255,.35)}
 .nav-label{visibility:hidden}
 </style>
 </head>
@@ -325,14 +329,21 @@ text{font-family:var(--font)}
 
 <!-- 8, WORK WAS THERE, NO CONTROL -->
 <div class="slide" id="slide-8" data-tint="red">
-  <div class="split solo">
-    <div>
-      <div class="eyebrow">The work was there… but I still didn't control it</div>
-      <div class="story-line">I was making money from signing services… <span class="kic">but not enough to replace my job</span>.</div>
-      <div class="story-line dim">I thought I needed more signings, more driving, more assignments.</div>
-      <div class="story-line">Then I saw the client paid <span class="kic">$200</span>… and I got <span class="kic">$60</span> for doing the work.</div>
+  <div class="eyebrow">The work was there… but I still didn't control it</div>
+  <div style="font-size:22px;color:rgba(255,255,255,.65);text-align:center;margin-bottom:28px">Client paid <span style="color:#fff;font-weight:700">$200</span> total. They kept <span style="color:#CCA44F;font-weight:700">$140</span>. You got <span style="color:#D8513B;font-weight:700">$60</span>.</div>
+  <div style="display:flex;gap:0;width:700px;max-width:88%;border-radius:14px;overflow:hidden;margin:0 auto 28px">
+    <div style="flex:1;background:rgba(216,81,59,.12);border:1.5px solid rgba(216,81,59,.35);padding:28px 32px;text-align:center">
+      <div style="font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(216,81,59,.8);margin-bottom:10px">You got</div>
+      <div style="font-size:68px;font-weight:800;color:#D8513B;line-height:1">$60</div>
+      <div style="font-size:14px;color:rgba(255,255,255,.4);margin-top:8px">for doing the work</div>
+    </div>
+    <div style="flex:1;background:rgba(204,164,79,.08);border:1.5px solid rgba(204,164,79,.3);border-left:none;padding:28px 32px;text-align:center">
+      <div style="font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#CCA44F;margin-bottom:10px">They kept</div>
+      <div style="font-size:68px;font-weight:800;color:#CCA44F;line-height:1">$140</div>
+      <div style="font-size:14px;color:rgba(255,255,255,.4);margin-top:8px">for owning the client</div>
     </div>
   </div>
+  <div class="story-line dim" style="text-align:center">I was making money from signing services… <span style="color:rgba(255,255,255,.75)">but not enough to replace my job</span>.</div>
 </div>
 
 <!-- 9, THE QUESTION -->
@@ -359,33 +370,108 @@ text{font-family:var(--font)}
 
 <!-- 11, FIRST GOOD MONTH -->
 <div class="slide" id="slide-11" data-tint="green">
-  <div class="split solo">
-    <div>
-      <div class="eyebrow">The first good month proved it wasn't luck</div>
-      <div class="story-line">I stopped waiting on signing platforms and started <span class="kic">getting my own clients</span>.</div>
-      <div class="story-line dim">I paid attention to where they came from, why they trusted me, and why they booked.</div>
-      <div class="story-line">That first good month showed me <span class="kic">this could be repeated</span>.</div>
+  <div class="eyebrow" style="color:#4FB286">The first good month proved it wasn't luck</div>
+  <div style="display:flex;align-items:flex-end;justify-content:center;gap:14px;height:175px;margin:20px auto 0">
+    <div style="display:flex;flex-direction:column;align-items:center">
+      <div style="width:50px;height:30px;background:rgba(255,255,255,.1);border-radius:4px 4px 0 0"></div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center">
+      <div style="width:50px;height:52px;background:rgba(255,255,255,.13);border-radius:4px 4px 0 0"></div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center">
+      <div style="width:50px;height:80px;background:rgba(255,255,255,.17);border-radius:4px 4px 0 0"></div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center">
+      <div style="width:50px;height:112px;background:rgba(79,178,134,.35);border-radius:4px 4px 0 0"></div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;position:relative">
+      <div style="position:absolute;top:-28px;white-space:nowrap;font-size:11px;font-weight:700;color:#4FB286;letter-spacing:.08em;text-transform:uppercase">First Good Month</div>
+      <div style="width:50px;height:158px;background:#4FB286;border-radius:4px 4px 0 0"></div>
     </div>
   </div>
+  <div style="display:flex;justify-content:center;gap:14px;margin:6px auto 24px">
+    <div style="width:50px;text-align:center;font-size:10px;color:rgba(255,255,255,.22);font-weight:600">Mo 1</div>
+    <div style="width:50px;text-align:center;font-size:10px;color:rgba(255,255,255,.22);font-weight:600">Mo 2</div>
+    <div style="width:50px;text-align:center;font-size:10px;color:rgba(255,255,255,.22);font-weight:600">Mo 3</div>
+    <div style="width:50px;text-align:center;font-size:10px;color:rgba(255,255,255,.3);font-weight:600">Mo 4</div>
+    <div style="width:50px;text-align:center;font-size:10px;color:rgba(255,255,255,.55);font-weight:600">Mo 5</div>
+  </div>
+  <div class="story-line" style="text-align:center">I stopped waiting on signing platforms and started <span class="kic" style="color:#4FB286">getting my own clients</span>.</div>
+  <div class="story-line dim" style="text-align:center;margin-top:10px">That first good month showed me <span style="color:rgba(255,255,255,.65)">this could be repeated</span>.</div>
 </div>
 
 <!-- 12, THE SHIFT -->
 <div class="slide" id="slide-12">
-  <div class="split solo">
-    <div>
-      <div class="eyebrow">The Shift</div>
-      <div class="story-line">I stopped treating notary like <span class="kic">random jobs</span>.</div>
-      <div class="story-line">I built a <span class="kic">client path I could control</span>.</div>
-      <div class="story-line dim">That path became the system behind the business you see today.</div>
+  <div class="eyebrow">The Shift</div>
+  <div style="display:flex;align-items:stretch;justify-content:center;gap:0;width:100%;max-width:1100px;margin:18px auto 0;border-radius:16px;overflow:hidden">
+    <!-- LEFT: stressed / before -->
+    <div style="flex:1;background:rgba(216,81,59,.07);border:1.5px solid rgba(216,81,59,.2);border-right:none;border-radius:16px 0 0 16px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px 32px">
+      <svg width="240" height="170" viewBox="0 0 240 170" style="margin-bottom:16px">
+        <!-- Left small stressed figure -->
+        <circle cx="38" cy="46" r="15" fill="rgba(216,81,59,.35)"/>
+        <path d="M38 61 Q27 82 25 108" stroke="rgba(216,81,59,.4)" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <path d="M38 71 Q20 64 14 50" stroke="rgba(216,81,59,.4)" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <path d="M38 71 Q56 64 62 50" stroke="rgba(216,81,59,.4)" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <path d="M25 108 Q19 128 15 148" stroke="rgba(216,81,59,.3)" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <path d="M25 108 Q30 128 35 148" stroke="rgba(216,81,59,.3)" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <!-- Center main stressed figure -->
+        <circle cx="120" cy="32" r="22" fill="rgba(216,81,59,.5)"/>
+        <path d="M120 54 Q103 82 99 118" stroke="rgba(216,81,59,.6)" stroke-width="9" fill="none" stroke-linecap="round"/>
+        <path d="M120 68 Q93 58 83 36" stroke="rgba(216,81,59,.6)" stroke-width="8" fill="none" stroke-linecap="round"/>
+        <path d="M120 68 Q147 58 157 36" stroke="rgba(216,81,59,.6)" stroke-width="8" fill="none" stroke-linecap="round"/>
+        <path d="M99 118 Q91 142 85 162" stroke="rgba(216,81,59,.45)" stroke-width="7" fill="none" stroke-linecap="round"/>
+        <path d="M99 118 Q107 142 113 162" stroke="rgba(216,81,59,.45)" stroke-width="7" fill="none" stroke-linecap="round"/>
+        <line x1="137" y1="12" x2="147" y2="4" stroke="rgba(216,81,59,.4)" stroke-width="3" stroke-linecap="round"/>
+        <line x1="145" y1="20" x2="158" y2="14" stroke="rgba(216,81,59,.4)" stroke-width="3" stroke-linecap="round"/>
+        <line x1="141" y1="6" x2="153" y2="2" stroke="rgba(216,81,59,.4)" stroke-width="3" stroke-linecap="round"/>
+        <!-- Right small stressed figure -->
+        <circle cx="202" cy="46" r="15" fill="rgba(216,81,59,.35)"/>
+        <path d="M202 61 Q191 82 189 108" stroke="rgba(216,81,59,.4)" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <path d="M202 71 Q184 64 178 50" stroke="rgba(216,81,59,.4)" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <path d="M202 71 Q220 64 226 50" stroke="rgba(216,81,59,.4)" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <path d="M189 108 Q183 128 179 148" stroke="rgba(216,81,59,.3)" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <path d="M189 108 Q194 128 199 148" stroke="rgba(216,81,59,.3)" stroke-width="5" fill="none" stroke-linecap="round"/>
+      </svg>
+      <div style="font-size:20px;font-weight:800;color:rgba(216,81,59,.9);letter-spacing:.02em;margin-bottom:6px">Random jobs</div>
+      <div style="font-size:15px;color:rgba(255,255,255,.3);text-align:center;line-height:1.5">Waiting. No control.<br>Never sure what's next.</div>
+    </div>
+    <!-- ARROW -->
+    <div style="flex:0 0 64px;background:rgba(255,255,255,.03);display:flex;align-items:center;justify-content:center;font-size:28px;color:rgba(255,255,255,.2)">→</div>
+    <!-- RIGHT: happy / after -->
+    <div style="flex:1;background:rgba(79,178,134,.06);border:1.5px solid rgba(79,178,134,.25);border-left:none;border-radius:0 16px 16px 0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px 32px">
+      <svg width="180" height="170" viewBox="0 0 180 170" style="margin-bottom:16px">
+        <circle cx="90" cy="28" r="22" fill="rgba(204,164,79,.7)"/>
+        <path d="M90 50 L90 118" stroke="rgba(204,164,79,.65)" stroke-width="9" stroke-linecap="round"/>
+        <path d="M90 72 L58 55" stroke="rgba(204,164,79,.65)" stroke-width="8" stroke-linecap="round"/>
+        <path d="M90 72 L122 55" stroke="rgba(204,164,79,.65)" stroke-width="8" stroke-linecap="round"/>
+        <path d="M90 118 L72 162" stroke="rgba(204,164,79,.55)" stroke-width="7" stroke-linecap="round"/>
+        <path d="M90 118 L108 162" stroke="rgba(204,164,79,.55)" stroke-width="7" stroke-linecap="round"/>
+        <circle cx="42" cy="74" r="14" fill="rgba(79,178,134,.5)"/>
+        <path d="M42 88 L42 130" stroke="rgba(79,178,134,.45)" stroke-width="6" stroke-linecap="round"/>
+        <path d="M42 102 L28 93" stroke="rgba(79,178,134,.45)" stroke-width="5" stroke-linecap="round"/>
+        <path d="M42 102 L56 93" stroke="rgba(79,178,134,.45)" stroke-width="5" stroke-linecap="round"/>
+        <path d="M42 130 L33 162" stroke="rgba(79,178,134,.35)" stroke-width="5" stroke-linecap="round"/>
+        <path d="M42 130 L51 162" stroke="rgba(79,178,134,.35)" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="138" cy="74" r="14" fill="rgba(79,178,134,.5)"/>
+        <path d="M138 88 L138 130" stroke="rgba(79,178,134,.45)" stroke-width="6" stroke-linecap="round"/>
+        <path d="M138 102 L124 93" stroke="rgba(79,178,134,.45)" stroke-width="5" stroke-linecap="round"/>
+        <path d="M138 102 L152 93" stroke="rgba(79,178,134,.45)" stroke-width="5" stroke-linecap="round"/>
+        <path d="M138 130 L129 162" stroke="rgba(79,178,134,.35)" stroke-width="5" stroke-linecap="round"/>
+        <path d="M138 130 L147 162" stroke="rgba(79,178,134,.35)" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+      <div style="font-size:20px;font-weight:800;color:#CCA44F;letter-spacing:.02em;margin-bottom:6px">Client path I control</div>
+      <div style="font-size:15px;color:rgba(255,255,255,.35);text-align:center;line-height:1.5">Consistent clients.<br>Time for what matters.</div>
     </div>
   </div>
+  <div class="story-line dim" style="text-align:center;margin-top:18px">That path became the business you see today.</div>
 </div>
 
 <!-- 13, WHAT I DO -->
 <div class="slide" id="slide-13">
   <svg width="64" height="64" viewBox="0 0 40 40" fill="none" class="floaticon" style="margin-bottom:22px"><circle cx="20" cy="20" r="17" stroke="var(--gold)" stroke-width="2"/><circle cx="20" cy="20" r="12.5" stroke="rgba(204,164,79,.5)" stroke-width="1.3" stroke-dasharray="2.5 2.8"/><path d="M14 20.5l4 4 8-9" stroke="var(--gold)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
   <div class="eyebrow">What I Do</div>
-  <div class="big-text" style="font-size:56px">I help notaries who already have their commission get <span>consistent, direct clients</span>, by building a client system instead of waiting on signing services.</div>
+  <div class="big-text" style="font-size:52px">I help notaries <span>stop depending on signing services</span>, build their own client system, and get <span>consistent, direct clients</span>.</div>
+  <div class="sub" style="margin-top:28px;font-size:20px;color:rgba(255,255,255,.4)">Once the system is running, you own it. No more waiting on anyone to hand you work.</div>
 </div>
 
 <!-- 14, FOR THE RIGHT PEOPLE -->
@@ -766,11 +852,30 @@ text{font-family:var(--font)}
 <div class="slide" id="slide-44">
   <div class="eyebrow">Your Roadmap</div>
   <div class="sectitle" style="font-size:46px;margin-bottom:8px">A clear path, <span>not another certification</span></div>
-  <div class="road">
-    <div class="phase"><div class="pw">Weeks 1 to 3</div><div class="pt">Foundation</div><div class="pp">We fix the base of your notary business: your market, your positioning, your Google/business presence, and the trust assets that help clients feel confident choosing you.</div></div>
-    <div class="phase"><div class="pw">Weeks 3 to 6</div><div class="pt">Direct Client Flow</div><div class="pp">Then we build the process that turns attention into direct booking opportunities, outreach, follow-up, client relationships, and paid traffic when it makes sense.</div></div>
+  <div style="display:flex;align-items:flex-start;justify-content:center;width:100%;max-width:1060px;margin:36px auto 0">
+    <div style="display:flex;flex-direction:column;align-items:center;flex:1">
+      <div style="width:72px;height:72px;border-radius:50%;background:rgba(204,164,79,.12);border:2px solid rgba(204,164,79,.8);display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:800;color:var(--gold)">1</div>
+      <div style="font-size:24px;font-weight:800;color:var(--text);margin-top:18px;text-align:center">Foundation</div>
+      <div style="font-size:17px;color:var(--text-dim);margin-top:10px;text-align:center;max-width:220px;line-height:1.5">Your market, your presence, and the trust assets that make clients choose you.</div>
+    </div>
+    <div style="flex:0 0 100px;display:flex;align-items:flex-start;padding-top:34px">
+      <svg width="100" height="14" viewBox="0 0 100 14"><line x1="0" y1="7" x2="78" y2="7" stroke="rgba(255,255,255,.18)" stroke-width="2" stroke-dasharray="6 4"/><polygon points="78,3 98,7 78,11" fill="rgba(255,255,255,.18)"/></svg>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;flex:1">
+      <div style="width:72px;height:72px;border-radius:50%;background:rgba(204,164,79,.08);border:2px solid rgba(204,164,79,.45);display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:800;color:var(--gold)">2</div>
+      <div style="font-size:24px;font-weight:800;color:var(--text);margin-top:18px;text-align:center">Direct Client Flow</div>
+      <div style="font-size:17px;color:var(--text-dim);margin-top:10px;text-align:center;max-width:220px;line-height:1.5">Outreach, follow-up, and paid traffic bringing clients directly to you.</div>
+    </div>
+    <div style="flex:0 0 100px;display:flex;align-items:flex-start;padding-top:34px">
+      <svg width="100" height="14" viewBox="0 0 100 14"><line x1="0" y1="7" x2="78" y2="7" stroke="rgba(79,178,134,.35)" stroke-width="2" stroke-dasharray="6 4"/><polygon points="78,3 98,7 78,11" fill="rgba(79,178,134,.35)"/></svg>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;flex:1">
+      <div style="width:72px;height:72px;border-radius:50%;background:rgba(79,178,134,.12);border:2px solid rgba(79,178,134,.6);display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:800;color:var(--green)">3</div>
+      <div style="font-size:24px;font-weight:800;color:var(--text);margin-top:18px;text-align:center">Scale</div>
+      <div style="font-size:17px;color:var(--text-dim);margin-top:10px;text-align:center;max-width:220px;line-height:1.5">More clients, more consistently, with less of your time on every job.</div>
+    </div>
   </div>
-  <div class="sub" style="margin-top:20px">Live coaching calls the whole way through. By the end you don't just have notes, <span class="kic">you have a system you're building with guidance</span>.</div>
+  <div class="sub" style="margin-top:30px">Live coaching calls the whole way through. By the end, you're not just learning. <span class="kic">You're already getting clients</span>.</div>
 </div>
 
 <!-- 43, EVERYTHING YOU GET (OUTCOME-LED STACK) -->
@@ -825,8 +930,31 @@ text{font-family:var(--font)}
   </div>
 </div>
 
-<!-- 49, ONE-TIME $1,500 -->
+<!-- 49, PRICE SCRATCH REVEAL -->
 <div class="slide" id="slide-49">
+  <div class="eyebrow">You're not paying any of that</div>
+  <div class="pstack">
+    <div class="prow" id="prow-1">
+      <div class="pamt">$9,750</div>
+      <div class="plbl">The full value you just saw</div>
+    </div>
+    <div class="prow frag" id="prow-2" data-strike="#prow-1">
+      <div class="pamt">$5,000</div>
+      <div class="plbl">Not even close</div>
+    </div>
+    <div class="prow frag" id="prow-3" data-strike="#prow-2">
+      <div class="pamt">$3,000</div>
+      <div class="plbl">Not that either</div>
+    </div>
+    <div class="prow frag" id="prow-4" data-strike="#prow-3">
+      <div class="pamt" style="color:var(--gold);text-decoration:none">$1,500</div>
+      <div class="plbl" style="color:var(--gold);font-size:22px;font-weight:700">Today only. First 5 people.</div>
+    </div>
+  </div>
+</div>
+
+<!-- 49, ONE-TIME $1,500 -->
+<div class="slide" id="slide-50">
   <div class="eyebrow">Webinar exclusive, today only</div>
   <div style="font-size:29px;font-weight:600;color:var(--text-dim);margin-bottom:10px">Everything you just saw is worth <span style="color:var(--gold);font-weight:800">$9,750</span>. Today:</div>
   <div class="bigprice glowing">$1,500</div>
@@ -834,13 +962,13 @@ text{font-family:var(--font)}
 </div>
 
 <!-- 49, FAST ACTION / FIRST 5 -->
-<div class="slide" id="slide-50" data-tint="green">
+<div class="slide" id="slide-51" data-tint="green">
   <div class="badge" style="margin-bottom:30px"><span class="dot"></span>Live Only</div>
   <div class="big-text" style="font-size:56px">First <span>5</span> to join get a<br><span>1:1 bonus call</span> with me.</div>
 </div>
 
 <!-- 50, JOIN TONIGHT -->
-<div class="slide" id="slide-51">
+<div class="slide" id="slide-52">
   <div class="cta-box">
     <div class="eyebrow">Join Tonight</div>
     <div class="ch">Ready to stop waiting on<br>signing services?</div>
@@ -853,14 +981,14 @@ text{font-family:var(--font)}
 <!-- ============ SECTION H, Q&A + CLOSE (52-53) ============ -->
 
 <!-- 51, Q&A -->
-<div class="slide" id="slide-52">
+<div class="slide" id="slide-53">
   <div class="eyebrow">Q&A</div>
   <div class="big-text" style="font-size:48px;margin-bottom:14px">Let's <span>open it up</span>.</div>
   <div class="sub" style="font-size:26px;max-width:940px">Got a question? Drop it in the chat. I'll run through a few live right now.</div>
 </div>
 
 <!-- 52, BRING IT HOME -->
-<div class="slide" id="slide-53">
+<div class="slide" id="slide-54">
   <div class="eyebrow">Bring it home</div>
   <div class="big-text" style="font-size:58px;margin-bottom:18px">Don't leave with just the map.<br><span>Build it with me.</span></div>
   <svg width="900" height="92" viewBox="0 0 900 92" style="margin:6px 0 8px">
@@ -878,7 +1006,7 @@ text{font-family:var(--font)}
 </div><!-- /slide-area -->
 
 <div class="nav-bar">
-  <div class="nav-label"><span id="slide-counter">1 / 53</span><div id="section-label">Intro</div></div>
+  <div class="nav-label"><span id="slide-counter">1 / 54</span><div id="section-label">Intro</div></div>
   <div class="nav-dots" id="nav-dots"></div>
   <div class="nav-arrow">click anywhere →</div>
 </div>
@@ -889,8 +1017,8 @@ text{font-family:var(--font)}
 <div id="jumpbox"></div>
 
 <script>
-const totalSlides=53;let current=1;
-const SECTIONS=[[1,'INTRO'],[5,'STORY & AUTHORITY'],[15,'MODULE 1'],[21,'MODULE 2'],[30,'MODULE 3'],[37,'PROOF'],[43,'THE OFFER'],[52,'Q&A & CLOSE']];
+const totalSlides=54;let current=1;
+const SECTIONS=[[1,'INTRO'],[5,'STORY & AUTHORITY'],[15,'MODULE 1'],[21,'MODULE 2'],[30,'MODULE 3'],[37,'PROOF'],[43,'THE OFFER'],[53,'Q&A & CLOSE']];
 const PITCH_START=43;
 function fitStage(){const s=Math.min(window.innerWidth/1920,window.innerHeight/1080);document.documentElement.style.setProperty('--scale',s)}
 window.addEventListener('resize',fitStage);fitStage();
@@ -907,11 +1035,11 @@ function applyState(s,dir){frags(s).forEach(f=>f.classList[dir<0?'add':'remove']
   document.getElementById('slide-counter').textContent=current+' / '+totalSlides;
   document.getElementById('pageno').textContent=String(current).padStart(2,'0');
   const sl=document.getElementById('section-label');if(sl)sl.textContent=sectionFor(current);
-  const cb=document.getElementById('ctabar');if(cb)cb.classList.toggle('show',current>=PITCH_START&&![45,48,49].includes(current)&&!document.body.classList.contains('shot'));
+  const cb=document.getElementById('ctabar');if(cb)cb.classList.toggle('show',current>=PITCH_START&&![45,48,49,50].includes(current)&&!document.body.classList.contains('shot'));
 }
 function goTo(n,dir){if(n<1||n>totalSlides||n===current)return;dir=dir||(n>current?1:-1);document.getElementById('slide-'+current).classList.remove('active');document.getElementById('dot-'+current).classList.remove('active');document.getElementById('dot-'+current).classList.add('visited');current=n;const s=document.getElementById('slide-'+current);s.classList.remove('active');void s.offsetWidth;s.classList.add('active');document.getElementById('dot-'+current).classList.add('active');applyState(s,dir)}
-function nextSlide(){const s=cur();const f=frags(s).find(x=>!x.classList.contains('shown'));if(f){f.classList.add('shown');if(f.classList.contains('strike-trigger')){const st=s.querySelector('.stack');if(st)st.classList.add('struck')}return}if(current<totalSlides)goTo(current+1,1)}
-function prevSlide(){const s=cur();const sh=frags(s).filter(x=>x.classList.contains('shown'));if(sh.length){const last=sh.pop();last.classList.remove('shown');if(last.classList.contains('strike-trigger')){const st=s.querySelector('.stack');if(st)st.classList.remove('struck')}return}if(current>1)goTo(current-1,-1)}
+function nextSlide(){const s=cur();const f=frags(s).find(x=>!x.classList.contains('shown'));if(f){f.classList.add('shown');if(f.classList.contains('strike-trigger')){const st=s.querySelector('.stack');if(st)st.classList.add('struck')}if(f.dataset.strike){const el=s.querySelector(f.dataset.strike);if(el)el.classList.add('struck')}return}if(current<totalSlides)goTo(current+1,1)}
+function prevSlide(){const s=cur();const sh=frags(s).filter(x=>x.classList.contains('shown'));if(sh.length){const last=sh.pop();last.classList.remove('shown');if(last.classList.contains('strike-trigger')){const st=s.querySelector('.stack');if(st)st.classList.remove('struck')}if(last.dataset.strike){const el=s.querySelector(last.dataset.strike);if(el)el.classList.remove('struck')}return}if(current>1)goTo(current-1,-1)}
 const bo=document.getElementById('blackout');function toggleBlackout(){bo.style.display=bo.style.display==='block'?'none':'block'}
 let ovOpen=false;const ov=document.getElementById('overview');
 function buildOverview(){if(ov.childElementCount)return;for(let i=1;i<=totalSlides;i++){const sl=document.getElementById('slide-'+i);const head=sl.querySelector('.title,.sectitle,.big-text,.eyebrow');const tile=document.createElement('div');tile.className='ov-tile';tile.innerHTML='<div class="ov-num">'+i+'</div><div class="ov-txt"></div>';tile.lastChild.textContent=head?head.textContent.trim().slice(0,70):'';tile.onclick=e=>{e.stopPropagation();toggleOverview();goTo(i)};ov.appendChild(tile)}ov.onclick=e=>{if(e.target===ov)toggleOverview()}}
